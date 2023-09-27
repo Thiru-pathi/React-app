@@ -11,12 +11,12 @@ jobs:
     steps:
       - name: 🚚 Get latest code
         uses: actions/checkout@v3
-        with:
-          Default: https://github.com/Thiru-pathi/React-app.git
+
       - name: 📂 Sync folders and files to the server
-        uses: ./
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /public_html/uat.savemom.in/
+          protocol: ${{ secrets.FTP_PORTOCOL }}
+          server-dir: /home/savemom/public_html/uat.savemom.in/
