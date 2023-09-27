@@ -15,7 +15,7 @@ jobs:
       - name: 📂 Sync folders and files to the server
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
-          server: ftp.savemom.in
+          server: ${{ secrets.FTP_server }}
           username: uat@uat.savemom.in
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftp
