@@ -15,8 +15,9 @@ jobs:
       - name: 📂 Sync folders and files to the server
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
+          server: ftp.savemom.in
+          username: uat@uat.savemom.in
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ${{ secrets.FTP_PORTOCOL }}
+          protocol: ftps
+          port: 990
           
