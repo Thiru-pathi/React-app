@@ -18,6 +18,7 @@ jobs:
           server: ${{ secrets.FTP_server }}
           username: uat@uat.savemom.in
           password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: /home/savemom/public_html/uat.savemom.in/
           protocol: ftp
           port: 21
           
