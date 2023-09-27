@@ -12,6 +12,9 @@ jobs:
       - name: 🚚 Get latest code
         uses: actions/checkout@v3
 
+      - name: Install npm dep
+	      run: npm install ftp
+
       - name: 📂 Sync folders and files to the server
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
@@ -21,4 +24,7 @@ jobs:
           server-dir: /home/savemom/public_html/uat.savemom.in/
           protocol: ftp
           port: 21
+
+          
+
           
